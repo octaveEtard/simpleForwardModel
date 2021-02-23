@@ -70,8 +70,9 @@ trf = XtX \ Xty;
 % trf = (XtX + lambda2 * eye(nLags,nLags))\ Xty;
 
 % -- OR: curve penalty
+% meanEigen = trace(XtX) / nLags; % mean eigenvalue of XtX
 % L = curvePenaltyMatrix(nLags);
-% lambda2 = 0.5 * meanEigen; % the 
+% lambda2 = 0.5 * meanEigen;
 % trf = (XtX + lambda2 * (L'*L))\ Xty;
 
 %% Plot TRFs
